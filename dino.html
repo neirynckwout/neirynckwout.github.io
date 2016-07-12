@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+
+		function toggle_visibility(id) {
+		var e = document.getElementById(id);
+		if(e.style.display == 'block')
+		e.style.display = 'none';
+		else
+		e.style.display = 'block';
+		} 
+
+		
+</script>
+
+ <link href="../img/favi/favipizza.ico" rel="shortcut icon" type="image/x-icon" />
+
+<!-- <style>
+	@font-face {
+	font-family: 'dino';
+	src: url('..img/dino/dino.otf');
+	}
+</style> -->
+
+ <title>dino</title>
+
+</head>
+
+<body style="background-color: #f6b6b3">
+
+<div class="header">
+	<p id="WoutNeirynck">
+		<a href="index.html">Wout Neirynck</a>
+	</p>
+
+	<p id="who">
+		<a onclick="toggle_visibility('foo');">&iquest;Qu&eacute;?</a>
+		<!-- <a href="#" onclick="toggle_visibility('foo');">Wie?</a> -->
+	</p>	
+</div>
+
+
+
+<div class="wrapper">
+
+
+	<div id="foo">
+		<div id="footxt">
+			<div id="footxtmain">
+				<h1>Wout Neirynck </h1>
+				<p>Bachelor in Visual Arts, Graphic Design <br> Based in Brussels</p>
+				<p> Lover of pizza &amp; coffee. But not together.</p>
+			</div>
+			<div id="footxtsec">
+				<p> ahoi@woutneirynck.be (non-existing, you spambot) </p>
+				<p> <a href="https://instagram.com/neirynckwout/" target="_blank">instagram: @neirynckwout </a> <br>
+					<a href="http://neirynckwout.vsco.co/" target="_blank">neirynckwout.vsco.co</a>
+				</p>
+			</div>
+			<img src="../img/who/icons.png" style="max-width:150px; margin-top:10px">
+		</div>
+		<a onclick="toggle_visibility('foo');">
+			<div id="closefoo">
+				<img src="img/who/close.png">
+			</div>
+		</a>
+	</div>
+
+	<div class="pagewrapper">
+		<div class="pagetxt" style="color: #006b57; display:none">
+			<h1 style="color: #006b57">dino</h1>
+			Dino is condensed, bold, geometric. Inspired by road- signature fonts like DIN and interstate. But tries to be more human-like with a double story 'a' and double story 'g'. Dino also has some funny icons.
+		</div>
+
+		<div class="pageimg">
+			<img src="img/dino/dino1.png">
+		</div>
+
+		<div class="pageimg">
+			<img src="img/dino/dino2.png">
+		</div>
+
+		<div class="pageimg">
+			<img src="img/dino/dino3.png">
+		</div>
+
+		<div class="pageimg">
+			<img src="img/dino/dino4.png">
+		</div>
+
+		<div class="pageimg">
+			<img src="img/dino/dino5.png">
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+
+</html>

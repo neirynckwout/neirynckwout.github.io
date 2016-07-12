@@ -1,0 +1,320 @@
+@font-face {
+	font-family: 'Output Sans';
+	src: url('../fonts/Output_Sans-Regular.woff2') format("woff2"),
+		 url('../fonts/Output_Sans-Regular.woff') format("woff");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Output Sans';
+	src: url('../fonts/Output_Sans-Medium.woff2') format("woff2"),
+		 url('../fonts/Output_Sans-Medium.woff') format("woff");
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Output Sans';
+	src: url('../fonts/Output_Sans-Bold.woff2') format("woff2"),
+		 url('../fonts/Output_Sans-Bold.woff') format("woff");
+		 font-style: normal;
+		 font-weight: bold;
+}
+
+/* Micro reset */
+
+*,*:before,*:after{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+/* end reset */
+
+body {
+	font-family: 'Output Sans', sans-serif;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	background: #EEE;
+}
+
+#site-wrap {
+	position: absolute;
+	width: 100%;
+	font-size: 0.875em; /* 14px */
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 1em;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 15px;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5em;
+	padding-right: 10px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+aside {
+	margin-top: 20px;
+}
+
+video{
+	width: 100%;
+}
+
+.medium {
+	font-weight: 500;
+}
+
+.normal {
+	font-weight: normal;
+}
+
+.clear {
+	clear: both;
+}
+
+#logo-tm{
+	position: fixed;
+	z-index: 9999;
+	top: 18px;
+	right: 45px;
+	width: 100px;
+	height: 30px;
+	background: url('../images/structure/tm_icon_black.svg') no-repeat;
+}
+
+#logo-tm a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* navigation */
+
+#nav-trigger {
+	position: fixed;
+	left: 45px;
+	top: 18px;
+	z-index: 999;
+	width: 120px;
+	height: 30px;
+	cursor: pointer;
+	background: url('../images/structure/hamburger_black.svg') no-repeat;
+}
+
+#nav-trigger.open {
+	background: url('../images/structure/cross_white.svg') no-repeat;
+}
+
+#navigation {
+	position: fixed;
+	z-index: 2;
+	overflow: hidden;
+	width: 0px;
+	height: 100%;
+	padding: 80px 0;
+	font-size: 1em; /* 16px */
+	font-weight: bold;
+	background-color: #000;
+	color: #0ECDD8;
+}
+
+.nav-item {
+	white-space: nowrap;
+	margin-left: 45px;
+	margin-bottom: 10px;
+	min-height: 16px;
+	max-height: 5%;
+}
+
+.nav-item:first-child {
+	margin-bottom: 20px;
+}
+
+.nav-item:first-child a {
+	color: #0ECDD8;
+}
+
+.nav-item a {
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+}
+
+.nav-item span {
+	display: inline-block;
+	overflow: hidden;
+	width: 0;
+}
+
+/* end navigation */
+
+/* sections */
+
+#typemedia {
+	background-color: #52EEF7;
+}
+
+.section {
+	padding: 65px 45px;
+}
+
+.content {
+	float: left;
+	width: 35%;
+	margin: 40px 15px 12px 0;
+	padding: 0;
+}
+
+.content ul {
+	margin-top: 20px;
+}
+
+.content ul li {
+	margin-bottom: 5px;
+}
+
+.download {
+	display: inline-block;
+	text-decoration: none;
+	height: 20px;
+	padding-top: 2px;
+	padding-left: 30px;
+	background-image: url('../images/structure/download.svg');
+	background-size: 20px;
+	background-repeat: no-repeat;
+}
+
+/* end sections */
+
+/* flexslider */
+
+.flexslider {
+	margin: 0;
+	border: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: 0;
+	-moz-box-shadow: 0;
+	-o-box-shadow: 0;
+	box-shadow: 0;
+}
+
+.flex-direction-nav a {
+	margin: 0;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	color: inherit;
+	text-shadow: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+ }
+ 
+.flex-direction-nav a:before {
+	display: none;
+	content: none;
+}
+
+.flex-direction-nav a.flex-next:before {
+	content: none;
+}
+
+.flex-direction-nav .flex-prev {
+	left: 0;
+}
+.flex-direction-nav .flex-next {
+	right: 0;
+}
+ 
+.flex-prev, .flex-next {
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+	cursor: url("../images/structure/right-manicule.svg") 20 20, e-resize;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+ 	cursor: url("../images/structure/left-manicule.svg") 20 20, w-resize;
+}
+
+/*end flexslider */
+
+/* mobile */
+
+/* Small screens ----------- */
+@media only screen and (min-width : 320px) {
+	#site-wrap {
+		font-size: 1em; /* 16px */
+	}
+	#nav-trigger {
+		left: 30px;
+		height: 25px;
+	}
+	#logo-tm{
+		top: 20px;
+		right: 30px;
+		height: 25px;
+	}
+	.content {
+		float: none;
+		width: 100%;
+		margin: 30px 0;
+		padding: 0 30px;
+	}
+	.section {
+		padding: 65px 0;
+	}
+}
+
+/* Medium screens ----------- */
+@media only screen and (min-width : 769px) {
+	#site-wrap {
+		font-size: 0.875em; /* 14px */
+	}
+	#nav-trigger {
+		left: 45px;
+		height: 30px;
+	}
+	#logo-tm{
+		top: 18px;
+		right: 45px;
+		height: 30px;
+	}
+	.content {
+		float: left;
+		width: 35%;
+		margin: 40px 15px 12px 0;
+		padding: 0;
+	}
+	.section {
+		padding: 65px 45px;
+	}
+}
+
+/* end mobile */

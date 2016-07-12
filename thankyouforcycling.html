@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="flexslider.css">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+
+
+<script type="text/javascript">
+
+		function toggle_visibility(id) {
+		var e = document.getElementById(id);
+		if(e.style.display == 'block')
+		e.style.display = 'none';
+		else
+		e.style.display = 'block';
+		} 
+
+		
+</script>
+
+ <link href="../img/favi/favipizza.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+</head>
+
+<body>
+
+<div class="header">
+	<p id="WoutNeirynck">
+		<a href="index.html">Wout Neirynck</a>
+	</p>
+
+	<p id="who">
+		<a onclick="toggle_visibility('foo');">&iquest;Qu&eacute;?</a>
+		<!-- <a href="#" onclick="toggle_visibility('foo');">Wie?</a> -->
+	</p>	
+</div>
+
+
+
+<div class="wrapper">
+
+	<div id="foo">
+		<div id="footxt">
+			<div id="footxtmain">
+				<h1>Wout Neirynck </h1>
+				<p>Bachelor in Visual Arts, Graphic Design <br> Based in Brussels</p>
+				<p> Lover of pizza &amp; coffee. But not together.</p>
+			</div>
+			<div id="footxtsec">
+				<p> ahoi@woutneirynck.be (non-existing, you spambot) </p>
+				<p> <a href="https://instagram.com/neirynckwout/" target="_blank">instagram: @neirynckwout </a> <br>
+					<a href="http://neirynckwout.vsco.co/" target="_blank">neirynckwout.vsco.co</a>
+				</p>
+			</div>
+			<img src="../img/who/icons.png" style="max-width:150px; margin-top:10px">
+		</div>
+		<a onclick="toggle_visibility('foo');">
+			<div id="closefoo">
+				<img src="img/who/close.png">
+			</div>
+		</a>
+	</div>
+
+
+	<!-- /////// -->
+
+	<div class="pagewrapper">
+		<div class="pagetxt" >
+			<h1>thank you for cycling</h1>
+			The big amount of car traffic is one part of the current mobility problems in Brussels. This car-traffic has a lot of negative effects on local health, the environment and the usage of the limited space in the city. We would be much better off, if we change from car traffic to bike-traffic.<br>
+			This poster shows us a hypothetical infographic, about how we have to change different aspects in order to change from a very negative traffic system in the city, To a utopic city where no car traffic is needed. Every commute is done by walking, by bike or by public transport. There is no air pollution, people are healthy, local economy is doing well, a green city.
+
+		</div>
+
+
+
+		<!-- 
+		<div class="pageimg">
+			<img src="img/thankyouforcycling/bp1.jpg">
+		</div>
+		
+		<div class="pageimg">
+			<img src="img/thankyouforcycling/bp2.jpg">
+		</div>
+
+		<div class="pageimg">
+			<img src="img/thankyouforcycling/bp3.jpg">
+		</div>
+		-->
+
+
+		<div class="flexslider">
+		<div class="flex-viewport" style="overflow: hidden; position: relative;">
+			<ul class="slides" style="width: 4400%; transition-duration: 0s; transform: translate3d(-6755px, 0px, 0px);">
+
+				<!-- <li class="clone" aria-hidden="true" style="width: 1351px; float: left; display: block;"><img class="lazy"  draggable="false" src="img/thankyouforcycling/bp3.jpg"></li> -->
+
+				<li class="" style="width: 1351px; float: left; display: block;"><img src="img/thankyouforcycling/bp1.jpg" draggable="false"></li>
+
+				<li class="" style="width: 1351px; float: left; display: block;"><img src="img/thankyouforcycling/bp2.jpg" draggable="false"></li>
+
+				<li class="" style="width: 1351px; float: left; display: block;"><img src="img/thankyouforcycling/bp3.jpg" draggable="false"></li>
+				
+				<!-- <li class="clone" aria-hidden="true" style="width: 1351px; float: left; display: block;"><img src="img/thankyouforcycling/bp1.jpg" draggable="false"></li> -->
+
+			</ul>
+		</div>
+		<ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="thankyouforcycling.html" style="display: block;"></a></li><li class="flex-nav-next"><a class="flex-next" href="thankyouforcycling.html" style="left: 50%; width: 50%;"></a></li></ul>
+		</div>
+
+		
+
+	</div>
+
+</div>
+
+</body>
+
+</html>

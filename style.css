@@ -1,0 +1,368 @@
+@font-face {
+font-family: 'dino';
+src: url('img/dino/dino.otf');
+}
+
+
+
+body {
+  font-size: 20px;
+  line-height: 27px;
+  font-family: 'Karla', sans-serif;
+  color : black;
+  margin: 0px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: #ffed00;
+}
+
+::selection {
+    color: white;
+    background: #000000;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+
+.header{
+  /* background-color: #f3f3f3; */
+  /* background-color: rgba(243,243,243, 0.93); */
+  background-color: rgba(255,255,255, 0.90); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: black;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  z-index: 1000;
+}
+
+#WoutNeirynck {
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  color: black;
+}
+
+#WoutNeirynck a {
+  color: black;
+  box-shadow: none;
+}
+
+#who {
+  float: right;
+  margin-right: 30px;
+  margin-top: 20px;
+  cursor:pointer;
+}
+
+#foo {
+  position: fixed;
+  width: calc(100% - 60px);
+  left: 30px;
+  top: 120px;
+  bottom: 60px;
+  background-color: rgba(255,255,255, 0.90); 
+  border-width: 2px;
+  border-style: solid;
+  display: none;
+  border-color:black;
+  z-index: 1000;
+}
+
+#footxt {
+  width: calc(100% - 60px);
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+  color: black;
+}
+
+
+#closefoo {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  top: 150px;
+  right: 60px;
+  cursor:pointer;
+}
+
+ /*#foo a:link, #foo a:visited {
+  border-bottom: 2px solid white; 
+  text-decoration: none;
+  color: black;
+} */
+
+.wrapper{
+  margin-top: 120px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 90px;
+}
+
+.twoposts{
+  overflow: auto;
+}
+
+.post{
+  margin-bottom: 60px;
+  margin-right: 10px;
+  margin-left: 10px;
+  overflow: auto;
+  float: left;
+  width: calc(50% - 20px);
+}
+
+
+.left {
+  float: left;
+  /* background-color: #d8d8d8; */
+  width: calc(60% - 5px);
+  margin-right: 5px;
+}
+
+.left a img:hover {
+  -webkit-filter: brightness(110%); /* Chrome, Safari, Opera */
+  filter: brightness(110%);
+}
+
+h1, h1 a:link, h1 a:visited {
+  font-size: 20px; 
+  font-family: 'Karla', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  color: black;
+  box-shadow: none;
+}
+
+h1 a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.txt {
+  float: left;
+  width: calc(100%);
+} 
+
+.right {
+  float: left;
+  /* background-color: #ffed00; */
+  background-color: none;
+  width: calc(40% - 5px);
+  margin-left: 5px;
+}
+
+
+img{
+  width: 100%;
+}
+
+
+
+
+/* pgs ///////////////////////////// */
+/* pgs ///////////////////////////// */
+/* pgs ///////////////////////////// */
+/* pgs ///////////////////////////// */
+
+
+
+
+.pagewrapper{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagetxt{
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.pageimg{
+ width: 100% ;
+ background-color: none ;
+ overflow: auto;
+ margin-bottom: 60px;
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////// */
+
+
+@media only screen and (orientation : portrait) {
+
+
+
+.wrapper{
+  margin: 0px;
+  width: 100%;
+}
+
+.left {
+  float: none;
+  margin-bottom: 20px;
+  width: 100%;
+  overflow: auto;
+
+}
+
+.txt {
+  float: left;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+} 
+
+.right {
+  float: none;
+  /* background-color: blue; */
+  background-color: none;
+  width: 100%;
+}
+
+.header{
+  background-color: #f3f3f3;
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: black;
+  font-size: 20px;
+}
+
+.wrapper{
+  margin-top: 90px;
+}
+
+/* #WoutNeirynck, #who {
+  font-size: 20px;
+} */ 
+
+
+#foo {
+  overflow: scroll;
+}
+
+#footxtmain , #footxtsec {
+  font-size: 150%;
+  line-height: normal;
+}
+
+
+.pagewrapper{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagetxt{
+  width: calc(100% - 40px);
+  max-width: 600px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.pageimg{
+ width: 100% ;
+ background-color: none ;
+ overflow: auto;
+ margin-bottom: 60px;
+}
+
+}
+
+
+
+/* flexslider */
+
+.flexslider {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  -o-box-shadow: 0;
+  box-shadow: 0;
+}
+
+.flex-direction-nav a {
+  margin: 0;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  color: inherit;
+  text-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+ }
+ 
+.flex-direction-nav a:before {
+  display: none;
+  content: none;
+}
+
+.flex-direction-nav a.flex-next:before {
+  content: none;
+}
+
+.flex-direction-nav .flex-prev {
+  left: 0;
+}
+.flex-direction-nav .flex-next {
+  right: 0;
+}
+ 
+.flex-prev, .flex-next {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+  cursor: url("../images/structure/right-manicule.svg") 20 20, e-resize;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+  cursor: url("../images/structure/left-manicule.svg") 20 20, w-resize;
+}
+
+/*end flexslider */

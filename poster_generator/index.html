@@ -1,0 +1,224 @@
+<!DOCTYPE html> <!-- commentaar, wordt niet weergegeven door browser, doctype = document-type = In dit geval HTML-->
+<html lang="en"> 
+
+<head> 
+	<title>grads</title> 
+	<meta charset="utf-8"/>
+	<meta name="description" content="grads, a processing experiment"/> 
+	
+	<!-- Processing.js Header -->
+<script language='javascript' src='http://www.archive.org/download/Processing.js/processing-1.0.0.min.js'></script>
+<script type="text/javascript" src="js/jprocessingjs-0.9.min.js"></script>
+<script type="text/javascript" src="js/processing-1.4.1.min.js"></script>
+<script language='JavaScript'>
+/*Swiped from https://github.com/annasob/processing-js
+* This code searches for all the <script type="application/processing" target="canvasid">
+* in your page and loads each script in the target canvas with the proper id.
+* It is useful to smooth the process of adding Processing code in your page and starting
+* the Processing.js engine.
+*/
+if (window.addEventListener) {
+window.addEventListener("load", function() {
+ var scripts = document.getElementsByTagName("script");
+ var canvasArray = Array.prototype.slice.call(document.getElementsByTagName("canvas"));
+ var canvas;
+ for (var i = 0, j = 0; i < scripts.length; i++) {
+        if (scripts[i].type == "application/processing") {
+         var src = scripts[i].getAttribute("target");
+         if (src && src.indexOf("#") > -1) {
+           canvas = document.getElementById(src.substr(src.indexOf("#") + 1));
+           if (canvas) {
+             new Processing(canvas, scripts[i].text);
+             for (var k = 0; k< canvasArray.length; k++)
+             {
+               if (canvasArray[k] === canvas) {
+                 // remove the canvas from the array so we dont override it in the else
+                 canvasArray.splice(k,1);
+               }
+             }
+           }
+         } else {   
+           if (canvasArray.length >= j) {
+             new Processing(canvasArray[j], scripts[i].text);             
+           }
+           j++;
+         }          
+        }
+ }
+}, false);
+}
+</script>
+	
+	
+	<style type="text/css">
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	canvas {
+	position:absolute;
+left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+margin-top: auto;
+	}
+	
+	#canvas1 {
+	border-style: hidden;
+	}
+
+	
+	</style>
+</head> 
+
+<body>
+
+
+
+
+<script type="application/processing" target="canvas1">
+
+/*Processing sketch code goes here*/
+// 100, 255
+
+
+int marg= 60;
+int f1 = 210;
+int f2 = 255;
+int f3 = 120;
+int f4 = 220;
+int dif1 = 12;
+int dif2 = 4;
+float g1;
+
+void setup() {
+  //size(700, 850); 
+  //size(displayWidth, displayHeight); 
+  jProcessingJS(this, {fullscreen:true});
+  jProcessingJS(this); 
+
+  background(0, 0, 100);
+  colorMode(HSB, 360, 100, 100);
+}
+
+void draw() {
+  background(0, 0, 100);
+  noLoop();
+
+  /*
+  
+   fill(random(0,  360), random(15, 25), random(90, 95));
+   noStroke();
+   rect(marg, marg, width-marg*2, height-marg*2 );
+   
+   for (float y = marg; y < height-marg; y = y+10 ) { 
+   for (float x = marg; x < width-marg; x = x+10 ) {
+   fill(0, 0, 100);
+   ellipse(random(x-dif1, x+dif1), random(y-dif1, y+dif1), 6, 6);  
+   }
+   }
+   
+   fill(random(0,  360), random(40, 60), random(60, 80));
+   for (float y = marg; y < height-marg; y = y+20 ) { 
+   for (float x = marg; x < width-marg; x = x+20 ) {
+   ellipse(random(x-dif1, x+dif1), random(y-dif1, y+dif1), 6, 6);  
+   }
+   } 
+   
+   */
+
+  
+    fill(random(0, 360), random(20, 40), random(80, 100));
+  for (int ant = 1; ant < 5; ant = ant +1 ) {
+    g1 = random(200, 400);
+    ellipse(random(width), random(height), g1, g1);   
+  }
+  
+  fill(random(0, 360), random(20, 40), random(80, 100));
+  for (int ant = 1; ant < 5; ant = ant +1 ) {
+    g1 = random(200, 400);
+    ellipse(random(width), random(height), g1, g1);   
+  }
+filter(BLUR, 60);
+
+
+  //stroke(random(0, 360), random(40, 60), random(60, 80));
+  stroke(0, 0, 100);
+  for (float y = marg; y < height-marg; y = y+20 ) { 
+    for (float x = marg; x < width-marg; x = x+20 ) {
+      strokeWeight(2);
+      //line(random(x+3, x+7), random(y+3, y+7), random(x+13, x+17), random(y+13, y+17));
+      line(random(x+5-dif2, x+5+dif2), random(y+5-dif2, y+5+dif2), random(x+15-dif2, x+15+dif2), random(y+15-dif2, y+15+dif2));
+    }
+  } 
+
+
+
+
+
+
+
+
+  ///
+}
+
+void mousePressed() {
+  redraw();
+}
+
+
+
+
+/////////////
+
+</script>
+
+
+<canvas id="canvas1" >
+</canvas>
+
+
+</body>
+
+</html>
